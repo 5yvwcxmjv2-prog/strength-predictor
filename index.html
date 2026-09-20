@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>筋トレ成長分析</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>筋トレ成長分析</h1>
+
+    <p class="description">
+      筋トレ記録から、種目ごとの成長を分析します。
+    </p>
+
+
+    <!-- 記録入力エリア -->
+    <section class="card">
+      <h2>記録を追加</h2>
+
+      <div class="form-group">
+        <label for="date">日付</label>
+        <input type="date" id="date">
+      </div>
+
+      <div class="form-group">
+        <label for="exercise">種目</label>
+        <input
+          type="text"
+          id="exercise"
+          placeholder="例：ベンチプレス"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="weight">重量（kg）</label>
+        <input
+          type="number"
+          id="weight"
+          placeholder="例：80"
+          min="0"
+          step="0.5"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="reps">回数</label>
+        <input
+          type="number"
+          id="reps"
+          placeholder="例：10"
+          min="1"
+          step="1"
+        >
+      </div>
+
+      <button id="addRecordButton">記録を追加</button>
+    </section>
+
+
+    <!-- 分析対象選択 -->
+    <section class="card">
+      <h2>分析対象の種目</h2>
+
+      <select id="exerciseSelect">
+        <option value="">種目を選択してください</option>
+      </select>
+    </section>
+
+
+    <!-- 成長分析 -->
+    <section class="card">
+      <h2>成長分析</h2>
+
+      <div id="analysisResult">
+        <p>
+          記録を追加して、分析する種目を選択してください。
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 記録一覧 -->
+    <section class="card">
+      <h2>記録一覧</h2>
+
+      <div id="recordList">
+        <p>まだ記録がありません。</p>
+      </div>
+    </section>
+
+
+    <!-- 過去データ -->
+    <section class="card">
+      <h2>過去データ</h2>
+
+      <p class="description">
+        記録一覧から削除したデータもここに保存されています。
+      </p>
+
+      <div id="deletedRecordList">
+        <p>過去データはありません。</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html
